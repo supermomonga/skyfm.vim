@@ -11,9 +11,9 @@ let g:loaded_skyfm = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-command! skyfmUpdateChannels call skyfm#update_channels()
-command! -nargs=1 -complete=customlist,skyfm#channel_key_complete skyfmPlay call skyfm#play(<f-args>)
-command! skyfmStop call skyfm#stop()
+command! SkyfmUpdateChannels call skyfm#update_channels()
+command! -nargs=1 -complete=customlist,skyfm#channel_key_complete SkyfmPlay call skyfm#play(<f-args>)
+command! SkyfmStop call skyfm#stop()
 
 augroup skyfm
   autocmd!
