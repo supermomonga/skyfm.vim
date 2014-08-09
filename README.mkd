@@ -1,0 +1,47 @@
+## skyfm.vim
+
+Yes, Vim is the streaming-radio player.
+
+## Dependencies
+
+You need to install some Vim plugins, but `NeoBundle` make it painless. I reccomend it to manage plugins.
+You also need to install `mplayer` command.
+
+
+## Install
+
+I recommend to use `NeoBundle.vim` to install this plugin.
+
+
+```vim
+NeoBundleLazy 'supermomonga/skyfm.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
+if neobundle#tap('skyfm.vim')
+  call neobundle#config({
+        \   'autoload' : {
+        \     'unite_sources' : [
+        \       'skyfm'
+        \     ],
+        \     'commands' : [
+        \       'skyfmUpdateChannels',
+        \       'skyfmStop',
+        \       {
+        \         'name' : 'skyfmPlay',
+        \         'complete' : 'customlist,skyfm#channel_key_complete'
+        \       }
+        \     ],
+        \     'function_prefix' : 'skyfm'
+        \   }
+        \ })
+endif
+```
+
+
+## Usage
+
+At first, you need to get and cache channel list with `:skyfmUpdateChannels` command. Note that it takes long times.
+
+Then, you can choose and play the radio with `:Unite skyfm` or `:skyfmPlay [channel_id]`!
+
+## Licence
+
+MIT Licence
