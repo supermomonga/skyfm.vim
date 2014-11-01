@@ -22,10 +22,10 @@ if neobundle#tap('skyfm.vim')
         \       'skyfm'
         \     ],
         \     'commands' : [
-        \       'skyfmUpdateChannels',
-        \       'skyfmStop',
+        \       'SkyfmUpdateChannels',
+        \       'SkyfmStop',
         \       {
-        \         'name' : 'skyfmPlay',
+        \         'name' : 'SkyfmPlay',
         \         'complete' : 'customlist,skyfm#channel_key_complete'
         \       }
         \     ],
@@ -38,10 +38,11 @@ endif
 
 ## Usage
 
-At first, you need to get and cache channel list with `:skyfmUpdateChannels` command. Note that it takes long times.
+At first, you need to get and cache channel list with `:SkyfmUpdateChannels` command. Note that it takes long times.
 
-Then, you can choose and play the radio with `:Unite skyfm` or `:skyfmPlay [channel_id]`!
+Then, you can choose and play the radio with `:Unite skyfm` or `:SkyfmPlay [channel_id]`!
 
 ## Licence
 
 MIT Licence
+
